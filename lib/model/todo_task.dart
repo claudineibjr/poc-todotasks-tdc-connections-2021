@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:poc_todotasks_team/model/User.dart';
 import 'package:poc_todotasks_team/model/serializable.dart';
 
