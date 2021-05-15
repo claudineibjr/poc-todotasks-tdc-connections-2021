@@ -4,39 +4,39 @@ import 'package:poc_todotasks_team/model/serializable.dart';
 
 class TodoTask implements Serializable<TodoTask> {
   final int id;
-  final User responsable;
+  final User? responsable;
   final DateTime creationDate;
-  final DateTime expectedFinishDate;
-  final DateTime finishDate;
+  final DateTime? expectedFinishDate;
+  final DateTime? finishDate;
   final List<String> tasksToDo;
 
   TodoTask({
-    @required this.id,
+    required this.id,
     this.responsable,
-    @required this.creationDate,
+    required this.creationDate,
     this.expectedFinishDate,
     this.finishDate,
-    @required this.tasksToDo,
+    required this.tasksToDo,
   });
 
   // #region Serialization
   // #region FromJson
   factory TodoTask.fromJsonFactory(Map<String, dynamic> json) {
-    User responsable;
+    User? responsable;
     if (json['responsable'] != null) {
       responsable = User.fromJsonFactory(
         json['responsable'],
       );
     }
 
-    DateTime expectedFinishDate;
+    DateTime? expectedFinishDate;
     if (json['expectedFinishDate'] != null) {
       expectedFinishDate = DateTime.parse(
         json['expectedFinishDate'],
       );
     }
 
-    DateTime finishDate;
+    DateTime? finishDate;
     if (json['finishDate'] != null) {
       finishDate = DateTime.parse(
         json['finishDate'],

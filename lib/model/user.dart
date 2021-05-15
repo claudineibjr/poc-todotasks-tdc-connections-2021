@@ -8,10 +8,10 @@ class User implements Serializable<User> {
   String email;
 
   User({
-    @required this.id,
-    @required this.name,
-    @required this.surname,
-    @required this.email,
+    required this.id,
+    required this.name,
+    required this.surname,
+    required this.email,
   });
 
   // #region Serialization

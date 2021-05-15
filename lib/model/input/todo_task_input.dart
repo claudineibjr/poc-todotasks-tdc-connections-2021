@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:poc_todotasks_team/model/todo_task.dart';
 
 class TodoTaskInput {
-  final DateTime expectedFinishDate;
+  final DateTime? expectedFinishDate;
   final List<String> tasksToDo;
 
   TodoTaskInput({
     this.expectedFinishDate,
-    @required this.tasksToDo,
+    required this.tasksToDo,
   });
 
   factory TodoTaskInput.fromTodoTaskFactory(TodoTask todoTask) {
